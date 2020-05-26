@@ -1,0 +1,92 @@
+use_python_inference: false
+mode: fluid
+draw_threshold: 0.5
+metric: COCO
+arch: YOLO
+min_subgraph_size: 3
+with_background: false
+Preprocess:
+- image_shape:
+  - 608
+  - 608
+  interp: 2
+  max_size: 0
+  target_size: 608
+  type: Resize
+  use_cv2: true
+- is_channel_first: false
+  is_scale: false
+  mean:
+  - 0.485
+  - 0.456
+  - 0.406
+  std:
+  - 0.229
+  - 0.224
+  - 0.225
+  type: Normalize
+- channel_first: true
+  to_bgr: false
+  type: Permute
+label_list:
+- rentoubu
+- renshou
+- renjiao
+- renlian
+- san
+- rumenzhajigan
+- rumenzhajidao
+- rumenzhaji
+- dengzi
+- kache
+- tumian
+- zaijianjianzhu
+- zaijianjianzhuzuoyemian
+- jikeng
+- tadiao
+- tadiaoguagou
+- toujian
+- anquanmao
+- anquanwang
+- xiaoqiche
+- jiancai
+- daianquanmaotoubu
+- shouji
+- huzhao
+- wajueji
+- motuoche
+- weigandeshuini
+- weidaianquanmaoerji
+- weidaianquanmaotoubu
+- shu
+- shuiguan
+- shuimian
+- meichuan shang yi
+- huo huo yan
+- deng
+- gai wang
+- shikuai
+- hongse an quan mao
+- jiao shou jia
+- zi xing che 
+- lan se an quan mao 
+- xingren
+- tong gao pai
+- zhong wu 
+- gang jin  dui
+- xue
+- xiangyan
+- ma jia
+- huangse an quan mao
+- xia e dai
+- tuo xie
+- liao dou
+- liao dou chao zhai
+- wei gua an quan wang
+- tong
+- shui
+- qi che
+- hun ning tu jiao ban che
+- gou
+- baise an quan mao
+- zhuan kuai er
