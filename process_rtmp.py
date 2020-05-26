@@ -17,7 +17,7 @@ import requests
 import json
 import base64
 from LOG import *
-from paddledet.paddle_detection import Yolov3Detection
+from paddle_detection import Yolov3Detection
 QUEUE_SIZE = 2
 PIXEL_MEANS = (0.485, 0.456, 0.406)  # RGB  format mean and variances
 PIXEL_STDS = (0.229, 0.224, 0.225)
